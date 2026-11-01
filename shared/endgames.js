@@ -1,0 +1,58 @@
+// Public educational positions, checked against the linked sources.
+// Only Réti is a historical composition; the other entries are teaching setups.
+export const ENDGAMES = [
+  {
+    id: 'lucena',
+    name: 'Lucena position',
+    subtitle: 'Rook & pawn · Build a bridge',
+    fen: '6K1/4k1P1/8/8/8/7r/8/5R2 w - - 0 1',
+    description: 'White to move. A classic winning technique in rook-and-pawn versus rook: build a bridge with the rook to shield the king from checks and promote the pawn. Uses the Lichess teaching position.',
+    sourceUrl: 'https://lichess.org/practice/rook-endgames/basic-rook-endgames/pqUSUw8Y/tAcIEIbG',
+    sourceName: 'Lichess · Lucena — The Bridge',
+  },
+  {
+    id: 'philidor',
+    name: 'Philidor position',
+    subtitle: 'Rook & pawn · Hold the draw',
+    fen: '1r2k3/R7/8/4PK2/8/8/8/8 b - - 0 1',
+    description: 'Black to move. Hold the draw a pawn down: keep the rook on your third rank to prevent the white king from advancing, then check from behind once the pawn advances. Uses the Lichess teaching position.',
+    sourceUrl: 'https://lichess.org/practice/rook-endgames/basic-rook-endgames/pqUSUw8Y/CvqYotss',
+    sourceName: 'Lichess · Philidor Position',
+  },
+  {
+    id: 'reti',
+    name: 'Réti’s study',
+    subtitle: 'Pawn endgame · The 1921 study',
+    fen: '7K/8/k1P5/7p/8/8/8/8 w - - 0 1',
+    description: 'White to move and draw. In Réti’s famous 1921 study, the king advances diagonally to pursue the opposing pawn while supporting its own. Discover the surprising geometry of the king.',
+    sourceUrl: 'https://www.jsbeasley.co.uk/ochess/reti1.pdf',
+    sourceName: 'John Beasley · Réti Pawn Studies · 1.1',
+  },
+  {
+    id: 'opposition',
+    name: 'The opposition',
+    subtitle: 'King & pawn · A single tempo',
+    fen: '8/2k5/8/8/2PK4/8/8/8 w - - 0 1',
+    description: 'White to move. A fundamental king-and-pawn endgame: use the opposition to reach key squares and clear a path for the pawn to promote. Uses the Lichess teaching position.',
+    sourceUrl: 'https://lichess.org/practice/pawn-endgames/practicestnamopposition/A4ujYOer/eNlmabX1',
+    sourceName: 'Lichess · Direct Opposition #1',
+  },
+  {
+    id: 'queen-mate',
+    name: 'Queen & king',
+    subtitle: 'Checkmate · Close the net',
+    fen: '8/8/3k4/8/8/4K3/8/4Q3 w - - 0 1',
+    description: 'White to move. Use the queen to restrict the black king, then bring your king closer to deliver checkmate. Leave the defender a legal move to avoid stalemate. Uses the Lichess teaching position.',
+    sourceUrl: 'https://lichess.org/practice/checkmates/piece-checkmates-i/BJy6fEDf/U3r4wkFn',
+    sourceName: 'Lichess · Queen Mate',
+  },
+  {
+    id: 'rook-mate',
+    name: 'Rook & king',
+    subtitle: 'Checkmate · The final rank',
+    fen: '8/8/3k4/8/8/4K3/8/4R3 w - - 0 1',
+    description: 'White to move. Cut off the black king with your rook and bring your king forward in support. Drive the defender to the edge of the board and deliver checkmate. Uses the Lichess teaching position.',
+    sourceUrl: 'https://lichess.org/practice/checkmates/piece-checkmates-i/BJy6fEDf/VeKiltmx',
+    sourceName: 'Lichess · Rook Mate',
+  },
+];
