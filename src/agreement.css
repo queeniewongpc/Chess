@@ -1,0 +1,59 @@
+.agreed-rules{margin:12px 0 0;font-size:10px;line-height:1.65;color:#66765f}
+.agreed-rules>div{display:grid;grid-template-columns:73px minmax(0,1fr);gap:8px;padding:7px 0;border-bottom:1px solid #e3e8d8}
+.agreed-rules>div:last-child{border-bottom:0}
+.agreed-rules dt{font-weight:600;color:#415d3e}
+.agreed-rules dd{margin:0;overflow-wrap:anywhere}
+.current-rules-title{font-size:12px;color:#56714a;margin:18px 0 0}
+.modal.face-dialog{display:flex;flex-direction:column;gap:12px;max-width:580px;height:min(880px,calc(100dvh - 50px));max-height:calc(100dvh - 50px);padding:14px;overflow:hidden}
+.face-dialog .facing-rules-panels{display:grid;grid-template-rows:minmax(0,1fr) minmax(0,1fr);gap:14px;min-height:0;flex:1}
+.facing-rules-panel{display:flex;flex-direction:column;min-height:0;padding:14px;border:1px solid #dce4d0;border-radius:10px;background:#fbfcf5;overflow:hidden}
+.facing-rules-panel.faces-black{transform:rotate(180deg);background:#eff3e7}
+.facing-rules-heading{display:flex;align-items:flex-start;gap:9px;flex-shrink:0}
+.facing-rules-heading>div{flex:1;min-width:0}
+.facing-rules-heading .eyebrow{font-size:8px;letter-spacing:1.4px}
+.modal .facing-rules-heading h2{font-size:17px;line-height:1.45;margin:5px 0 7px;color:#35583b}
+.facing-rules-heading .icon-button{flex-shrink:0}
+.facing-rules-scroll{min-height:0;flex:1;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#acbaa0 transparent;padding-right:6px;border-top:1px solid #dce4d0;border-bottom:1px solid #dce4d0}
+.facing-rules-scroll:focus-visible{outline:2px solid #8aa474;outline-offset:2px}
+.facing-rules-scroll .agreed-rules{margin-top:0}
+.facing-rules-scroll .current-rules-title{font-size:11px;margin:10px 0 3px}
+.facing-scroll-caption{font-size:8px;color:#87957d;margin:0 0 7px;flex-shrink:0}
+.facing-consent{display:flex;align-items:center;gap:7px;flex-shrink:0;margin-top:9px;padding:8px 9px;border:1px solid #d8e1cc;border-radius:6px;background:#fffef8;font-size:11px;line-height:1.5;cursor:pointer}
+.facing-consent.is-agreed{background:#e5efd9;border-color:#a6bb92}
+.facing-consent input{width:16px;height:16px;flex-shrink:0;accent-color:#507b43;margin:0}
+.facing-consent>svg{width:23px;height:25px;flex-shrink:0}
+.facing-consent>span{flex:1}
+.facing-consent>svg:last-child{width:16px;height:16px;color:#507b43}
+.face-dialog .shared-start-button{flex-shrink:0;min-height:43px;font-size:12px}
+.modal.party-agreement-dialog{display:flex;flex-direction:column;max-height:calc(100dvh - 40px);overflow:hidden}
+.party-agreement-dialog>.eyebrow,.party-agreement-dialog>h2,.party-agreement-dialog>.shared-start-button{flex-shrink:0}
+.local-confirm-scroll{min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;margin-bottom:16px;padding-right:5px}
+.local-confirm-scroll:focus-visible{outline:2px solid var(--primary,#87979f);outline-offset:2px}
+.local-confirm-crew{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;list-style:none;margin:18px 0;padding:0}
+.local-confirm-crew li{display:flex;align-items:center;gap:9px;border:1px solid var(--line,#dce3d3);border-left:3px solid var(--seat-color);border-radius:10px;padding:11px 9px;background:var(--surface-raised,#f6f8f0);color:var(--text,#293346);min-width:0}
+.local-confirm-crew svg{width:27px;height:32px;flex-shrink:0}
+.local-confirm-crew span{min-width:0;overflow-wrap:anywhere}
+.local-confirm-crew strong{display:block;font-size:12px;line-height:1.5}
+.local-confirm-crew small{display:block;font-size:10px;line-height:1.6;color:var(--muted,#819175)}
+.facing-rules-panel .guide-sections{gap:15px;margin-top:19px}
+.facing-rules-panel .guide-sections section{padding-bottom:12px}
+.facing-rules-panel .guide-sections section>span{font-size:8px;letter-spacing:.8px}
+.facing-rules-panel .guide-sections h3{font-size:12px;margin:7px 0}
+.facing-rules-panel .guide-sections p{font-size:10px;line-height:1.75}
+.guide-sections p+p{margin-top:8px}
+.facing-rules-panel .guide-source{margin:15px 0 10px;gap:5px}
+.facing-rules-panel .guide-source a{font-size:8px}
+.board-column .board-toolbar{flex-wrap:wrap}
+.board-column .board-status{flex:1;min-width:135px}
+.board-tools .hints-toggle{display:flex;align-items:center;justify-content:center;gap:5px;height:29px;padding:4px 7px;border:1px solid #d9e1cd;border-radius:5px;font-size:9px;white-space:nowrap;color:#7b8971;background:#f4f5ed}
+.board-tools .hints-toggle.is-on{color:#456a3d;background:#e5edd9;border-color:#b8cba7}
+.board-tools .hints-toggle strong{font-weight:600}
+.board-tools .hints-toggle:hover{border-color:#8fa77a}
+.board-column .move-hints-explanation{display:flex;align-items:flex-start;gap:7px;font-size:10px;line-height:1.6;color:#6e7f62;margin:5px 0 10px}
+.hint-legend-dot{width:8px;height:8px;border-radius:50%;background:#3b6646;border:1px solid #f4f2ce;box-shadow:0 0 0 1px #849c70;flex-shrink:0;margin-top:4px}
+.hint-legend-dot.hints-disabled{background:transparent;box-shadow:none;border-color:#9da692}
+.chessboard .square .movable-piece-hint{position:absolute;bottom:6%;left:50%;transform:translateX(-50%);width:32%;height:5%;min-height:3px;border-radius:3px;background:#315c3d;box-shadow:0 0 0 1px #f7f4cf;z-index:2;pointer-events:none}
+.chessboard .square .move-hint{width:27%;height:27%;background:#315b3e;border:2px solid #fff8d5;box-shadow:0 1px 4px #23392655}
+.chessboard .square .capture-hint{inset:5%;border:4px solid #d9ac4b;box-shadow:0 0 0 1px #39593d,inset 0 0 0 1px #39593d;background:#e5bd5b18}
+@media(max-width:760px){.modal.face-dialog{height:calc(100dvh - 34px);max-height:calc(100dvh - 34px);padding:10px;gap:9px}.face-dialog .facing-rules-panels{gap:10px}.facing-rules-panel{padding:11px}.modal .facing-rules-heading h2{font-size:15px;margin-top:4px}.facing-rules-heading .eyebrow{font-size:7px}.facing-consent{font-size:10px;padding:7px;margin-top:8px}.agreed-rules>div{grid-template-columns:67px minmax(0,1fr);gap:6px;padding:6px 0}.agreed-rules{font-size:10px}.board-tools .hints-toggle{height:28px}.board-column .move-hints-explanation{font-size:9px}}
+@media(max-height:650px){.modal.face-dialog{max-width:700px}.facing-rules-panel{padding:9px}.modal .facing-rules-heading h2{font-size:13px;margin:3px 0 4px}.facing-consent{margin-top:5px;padding:5px}.facing-scroll-caption{margin-bottom:4px}.facing-rules-heading .eyebrow{font-size:7px}}

@@ -1,0 +1,104 @@
+/* The whole seat strip faces its army. The show inherits that orientation. */
+body .party-table {
+  --party-rail:62px;
+  position:relative;
+  box-sizing:border-box;
+  width:min(100%,calc(var(--board-fit-width,100%) + 2 * var(--party-rail)));
+  margin-inline:auto;
+  padding:var(--party-rail);
+}
+body .party-table.no-shows { --party-rail:44px; }
+body .party-table>.board-frame { margin:0 auto; }
+body .party-table>.party-orbit {
+  position:absolute;inset:0;display:block;margin:0;padding:0;pointer-events:none;
+  z-index:4;
+}
+body .party-table .party-seat {
+  position:absolute;box-sizing:border-box;display:flex;flex-direction:row;align-items:center;
+  gap:7px;padding:4px 8px;border-radius:12px;
+  border:1px solid color-mix(in srgb,var(--seat-color) 42%,var(--line));
+  border-left:3px solid var(--seat-color);
+  transform-origin:center;
+  background:var(--tabletop-plate);
+}
+body .party-table .party-seat>div { flex:initial;min-width:0; }
+body .party-table .party-seat .party-seat-portrait { width:29px;height:34px;flex:none; }
+body .party-table .party-seat .party-seat-portrait>svg:not(.party-seat-emblem) { width:100%;height:100%; }
+body .party-table .party-seat .party-seat-emblem { width:11px;height:11px;right:-1px;bottom:-1px; }
+body .party-table .party-seat .party-seat-name { flex:1 1 85px;min-width:34px; }
+body .party-table .party-seat strong { font-size:11px;line-height:1.2; }
+body .party-table .party-seat small { display:flex;align-items:center;gap:3px;font-size:8px;line-height:1.3;color:var(--text-muted);white-space:nowrap; }
+body .party-table .party-seat small>i { width:4px;height:4px;border-radius:50%;background:var(--seat-color);flex:none; }
+body .party-table .party-clock { font-size:13px;line-height:1;font-weight:700;color:var(--text);flex:none;margin:0; }
+body .party-table .party-seat>.party-show-slot {
+  position:relative;flex:1.65 1 120px;width:auto;min-width:56px;height:100%;overflow:hidden;
+}
+body .party-table .party-show-inner { position:absolute;left:50%;top:50%;height:64px;transform-origin:center; }
+body .party-table .party-seat.is-active { border-color:var(--seat-color);box-shadow:inset 0 1px 0 #ffffff25,0 0 0 1px color-mix(in srgb,var(--seat-color) 45%,transparent),0 4px 12px #0004; }
+body .party-table .party-seat.is-eliminated { opacity:.65; }
+
+/* A three-sided table needs no boxes: the figures and names follow its edges. */
+body .party-table-3 .party-seat,
+body .party-table-3 .party-seat.is-active {
+  border:0;background:none;box-shadow:none;border-radius:0;padding-inline:2px;
+  filter:drop-shadow(0 1px 2px #0009);
+}
+body .party-table-3 .party-seat.is-active strong { color:var(--seat-color); }
+body .party-table-3 .party-seat .party-seat-portrait { width:25px; }
+body .party-table-3 .party-seat strong { text-shadow:0 1px 4px #000; }
+body .party-table-3 .party-seat>.party-show-slot { min-width:60px;flex-basis:100px; }
+
+/* Remote rivals retain upright, readable summaries; only the viewer has a stage. */
+body .party-table .is-online-seats .party-seat.is-side-summary {
+  flex-direction:column;justify-content:center;gap:5px;padding:6px 3px;text-align:center;
+}
+body .party-table .is-online-seats .party-seat.is-side-summary .party-seat-name { flex:initial;min-width:0;max-width:100%; }
+body .party-table .is-online-seats .party-seat.is-side-summary strong { white-space:normal;overflow-wrap:anywhere;font-size:9px; }
+body .party-table .is-online-seats .party-seat.is-side-summary small { justify-content:center;font-size:7px;white-space:normal; }
+
+body .board-column:fullscreen .party-surface { max-height:none; }
+body .board-column:fullscreen .party-table { width:100%; }
+body .board-column:fullscreen .party-table>.board-frame { width:100%; }
+
+@media(max-width:1159px) and (min-width:761px) {
+  body .party-table { --party-rail:48px; }
+  body .party-table .party-seat { padding-inline:4px;gap:4px;border-radius:9px; }
+  body .party-table .party-seat .party-seat-portrait { width:23px;height:28px; }
+  body .party-table .party-seat strong { font-size:9px; }
+  body .party-table .party-seat small { font-size:7px; }
+  body .party-table .party-clock { font-size:11px; }
+}
+@media(max-width:760px) {
+  body .party-table { --party-rail:48px; }
+  body .party-table .party-seat { padding-inline:5px;gap:4px;border-radius:9px; }
+  body .party-table .party-seat .party-seat-portrait { width:22px;height:28px; }
+  body .party-table .party-seat .party-seat-name { min-width:30px;flex-basis:65px; }
+  body .party-table .party-seat strong { font-size:10px; }
+  body .party-table .party-seat small { font-size:7px; }
+  body .party-table .party-clock { font-size:11px; }
+}
+@media(max-width:430px) {
+  body .party-surface.board-surface { padding-inline:5px; }
+  body .party-table { --party-rail:40px; }
+  body .party-table .party-seat { padding:2px 3px;gap:3px;border-radius:8px; }
+  body .party-table .party-seat .party-seat-portrait { display:none; }
+  body .party-table .party-seat .party-seat-name { flex-basis:54px;min-width:28px; }
+  body .party-table .party-seat strong { font-size:9px; }
+  body .party-table .party-seat small { font-size:6px; }
+  body .party-table .party-clock { font-size:10px; }
+  body .party-table .party-seat>.party-show-slot { min-width:52px;flex-basis:80px; }
+  body .party-table-3 .party-seat strong { font-size:9px; }
+  body .party-table-3 .party-clock { font-size:9px; }
+  body .party-table-3 .party-seat>.party-show-slot { min-width:40px; }
+}
+@media(max-width:350px) {
+  body .party-table { --party-rail:36px; }
+  body .party-table .party-seat strong { font-size:8px; }
+  body .party-table .party-seat small { font-size:6px; }
+  body .party-table-3 .party-seat small { display:none; }
+}
+
+@media(max-width:430px) { body .party-table.no-shows { --party-rail:36px; } }
+
+body .party-table .party-seat[data-team] .party-seat-name small { white-space:normal;line-height:1.15; }
+body .party-table .party-seat[data-team] .party-seat-name small>i { display:none; }

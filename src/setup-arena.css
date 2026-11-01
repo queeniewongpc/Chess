@@ -1,0 +1,130 @@
+.mode-option.is-arena {
+  border-color: #d7c7e8;
+  background: #fbf7ff;
+}
+
+.mode-option.is-arena > .arena-insignia {
+  width: 29px;
+  height: 29px;
+  margin-top: -4px;
+  margin-bottom: -4px;
+}
+
+.mode-option.is-arena strong {
+  color: #775294;
+}
+
+.mode-option.is-arena small {
+  color: #a089ac;
+}
+
+.mode-option.is-arena.is-selected {
+  border-color: #b28acb;
+  background: #f2e8fa;
+  box-shadow: inset 0 0 0 1px #b28acb22;
+}
+
+.mode-option.is-arena .mode-check {
+  color: #9568b4;
+}
+
+.arena-win-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.arena-win-options > button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  min-width: 0;
+  padding: 15px 7px 13px;
+  border: 1px solid var(--arena-line, #e0d6e7);
+  border-radius: 8px;
+  background: var(--arena-panel, #fcf9ff);
+  color: var(--arena-muted, #9a83a5);
+}
+
+.arena-win-options > button.is-selected {
+  border-color: var(--arena-coral, #b58ccf);
+  color: var(--arena-coral, #8e61a9);
+  box-shadow: inset 0 0 0 1px #b58ccf20;
+}
+
+.arena-win-options strong {
+  color: var(--arena-ink, #795b8b);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.arena-win-options small {
+  color: var(--arena-muted, #9b8aa3);
+  font-size: 9px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.arena-win-check {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+}
+
+.arena-king-validation,
+.arena-win-notice {
+  margin: 10px 0 0;
+  padding: 11px 12px;
+  border: 1px solid var(--arena-line, #e6d5b7);
+  border-radius: 6px;
+  background: var(--arena-panel, #fbf4e8);
+  color: var(--arena-coral, #956c3f);
+  font-size: 10px;
+  line-height: 1.75;
+}
+
+.arena-king-validation {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.arena-king-validation > svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.arena-win-notice {
+  border-color: var(--arena-line, #ded3e5);
+  background: var(--arena-panel, #f7f1fb);
+  color: var(--arena-muted, #8b7496);
+}
+
+.arena-roster-hint {
+  margin-bottom: 10px;
+}
+
+.undo-limit-settings .undo-custom-row {
+  margin-top: 0;
+}
+
+.undo-limit-settings .undo-limit-options {
+  margin-top: 12px;
+}
+
+@media (max-width: 760px) {
+  .arena-win-options strong { font-size: 12px; }
+  .arena-win-options small { font-size: 10px; }
+  .arena-king-validation, .arena-win-notice { font-size: 11px; }
+}
+
+@media (max-width: 380px) {
+  .arena-win-options > button { padding-inline: 5px; }
+  .arena-win-options strong { font-size: 11px; }
+  .arena-win-options small { font-size: 9px; }
+}

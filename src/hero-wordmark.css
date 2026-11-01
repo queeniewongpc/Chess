@@ -1,0 +1,93 @@
+/* Fill the desktop hero's open middle with a quiet signature after one entrance. */
+.hero.hero-with-wordmark {
+  display:grid;
+  grid-template-columns:minmax(0,max-content) minmax(170px,1fr) 155px;
+  gap:24px;
+}
+.hero-with-wordmark .hero-copy { min-width:0; }
+.hero.hero-with-wordmark .hero-stamp { width:155px;margin-right:0; }
+.hero-wordmark {
+  position:relative;
+  display:grid;
+  place-items:center;
+  width:100%;
+  max-width:230px;
+  justify-self:center;
+  height:106px;
+  color:#668267;
+  pointer-events:none;
+  user-select:none;
+  transform:rotate(-7deg);
+}
+.hero-wordmark-letters {
+  display:flex;
+  align-items:baseline;
+  white-space:nowrap;
+  font-size:clamp(31px,3.3vw,43px);
+  line-height:1.2;
+}
+.hero-wordmark-letter {
+  display:inline-block;
+  opacity:1;
+  transform:rotate(var(--letter-tilt));
+  transform-origin:50% 90%;
+}
+.hero-wordmark-letter:nth-child(3n+2) { color:#9c804c; }
+.hero-wordmark::before,.hero-wordmark::after {
+  content:'✦';
+  position:absolute;
+  font-size:15px;
+  line-height:1;
+  color:#ad9363;
+}
+.hero-wordmark::before { top:5px;left:12%;transform:rotate(12deg); }
+.hero-wordmark::after { right:4%;bottom:16px;font-size:10px; }
+.hero-wordmark-shadow {
+  position:absolute;
+  width:74%;
+  height:5px;
+  bottom:17px;
+  border-radius:50%;
+  background:#89987b;
+  opacity:.15;
+}
+body.arena-theme .hero-wordmark { color:var(--arena-mint); }
+body.arena-theme .hero-wordmark-letters {
+  text-shadow:2px 3px 0 var(--arena-outline);
+}
+body.arena-theme .hero-wordmark-letter:nth-child(3n+2) { color:var(--arena-coral); }
+body.arena-theme .hero-wordmark-letter:nth-child(3n) { color:var(--arena-cream); }
+body.arena-theme .hero-wordmark::before,body.arena-theme .hero-wordmark::after { color:var(--arena-coral); }
+body.arena-theme .hero-wordmark-shadow { background:#130b1b;opacity:.35; }
+
+@media(min-width:761px) and (max-width:1050px) {
+  .hero.hero-with-wordmark { grid-template-columns:minmax(0,1fr) 170px 125px;gap:16px; }
+  .hero.hero-with-wordmark .hero-stamp { width:145px;transform:scale(.82);transform-origin:right center; }
+  .hero-wordmark-letters { font-size:33px; }
+}
+@media(max-width:760px) {
+  .hero.hero-with-wordmark { grid-template-columns:minmax(0,1fr);gap:8px;padding-bottom:20px; }
+  .hero-wordmark { width:168px;height:48px;justify-self:end;margin-right:5px; }
+  .hero-wordmark-letters { font-size:29px; }
+  .hero-wordmark::before { top:-3px;left:3%;font-size:11px; }
+  .hero-wordmark::after { right:0;bottom:0;font-size:9px; }
+  .hero-wordmark-shadow { bottom:0;height:4px; }
+  /* The existing mobile game view hides its hero to leave room for the board. */
+  .has-game .hero.hero-with-wordmark { display:none; }
+}
+@media(prefers-reduced-motion:no-preference) {
+  .hero-wordmark-letter {
+    animation:queenie-letter-hop 680ms cubic-bezier(.22,.61,.36,1) both;
+    animation-delay:calc(120ms + var(--letter-index) * 90ms);
+  }
+  @keyframes queenie-letter-hop {
+    0% { opacity:0;transform:translateY(22px) rotate(-15deg) scale(.65); }
+    35% { opacity:1;transform:translateY(-17px) rotate(9deg) scale(1.06); }
+    60% { opacity:1;transform:translateY(3px) rotate(var(--letter-tilt)) scale(1.08,.9); }
+    79% { opacity:1;transform:translateY(-5px) rotate(var(--letter-tilt)) scale(.98,1.03); }
+    100% { opacity:1;transform:translateY(0) rotate(var(--letter-tilt)) scale(1); }
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  .hero-wordmark-letter { animation:none;opacity:1; }
+}

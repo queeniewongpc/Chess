@@ -1,0 +1,46 @@
+/* Midnight chess room: the same porcelain collection in a quieter evening light. */
+html.arena-theme { background:#202532; color-scheme:dark; }
+body.arena-theme {
+  --page:#202532;
+  --surface:#2b3242;
+  --surface-raised:#343d4e;
+  --surface-soft:#242b39;
+  --input-bg:#242b39;
+  --text:#f4efe4;
+  --muted:#b4bec9;
+  --subtle:#97a4b3;
+  --line:#4b5666;
+  --line-soft:#3e4858;
+  --control-hover:#394556;
+  --selected-bg:#414b58;
+  --selected-ink:#fff6e2;
+  --primary:#e1c99f;
+  --primary-ink:#252a3a;
+  --primary-hover:#eddbba;
+  --status-bg:#304b46;
+  --status-ink:#bce0ce;
+  --warning-bg:#503e36;
+  --warning-ink:#f1c6a6;
+  --danger:#ed9b87;
+  --highlight:#ddc698;
+  --panel-shadow:0 12px 34px #1117223b,inset 0 1px 0 #ffffff0c;
+  --well-shadow:inset 0 2px 7px #11172230,inset 0 -1px 0 #ffffff06;
+  --green:var(--primary);
+  --forest:var(--text);
+  --sage:#87979f;
+  --cream:#f4efe4;
+  --arena-ink:var(--text);
+  --arena-muted:var(--muted);
+  --arena-panel:var(--surface);
+  --arena-deep:#252a3a;
+  --arena-line:var(--line);
+  --arena-coral:#e39480;
+  --arena-mint:#9ac9b7;
+  --arena-cream:#f4efe4;
+  --arena-outline:#171d28;
+  --arena-font:var(--brand-font);
+  --arena-display:var(--brand-font);
+  color:var(--text);
+  color-scheme:dark;
+  background:radial-gradient(ellipse at 15% 0%,#35425566,transparent 48%),linear-gradient(135deg,#252a3a,#202532 65%);
+}

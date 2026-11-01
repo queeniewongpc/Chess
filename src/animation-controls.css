@@ -1,0 +1,20 @@
+.animation-controls{display:grid;gap:7px;margin:3px 0 8px;padding-top:6px;border-top:1px solid var(--line-soft,var(--line));color:var(--text);font-size:11px}
+.display-options{display:flex;flex-wrap:wrap;align-items:center;gap:8px;min-width:0;border:0;padding:0;margin:0}
+.display-options legend{float:left;width:64px;padding:7px 0;font-size:10px;font-weight:600;color:var(--muted)}
+.display-choices{display:flex;gap:5px;flex-wrap:wrap;min-width:0}
+.display-choice{display:inline-flex;align-items:center;gap:5px;padding:6px 8px;min-height:30px;border:1px solid var(--line);border-radius:9px;cursor:pointer;background:var(--surface-raised);font-size:11px;line-height:1.3}
+.display-choice input{width:12px;height:12px;margin:0;accent-color:var(--primary);cursor:inherit}
+.display-choice.is-selected{background:var(--selected-bg);color:var(--text);border-color:var(--highlight)}
+.display-choice:has(input:focus-visible){outline:2px solid var(--highlight);outline-offset:2px}
+.animation-channel{position:relative;display:inline-flex;align-items:center;gap:7px;min-height:34px;padding:6px 8px;border:1px solid var(--line);border-radius:9px;cursor:pointer;background:var(--surface-raised);line-height:1.3}
+.animation-channel input{position:absolute;inset:0;z-index:1;width:100%;height:100%;padding:0;margin:0;opacity:0;cursor:inherit}
+.animation-channel:has(input:focus-visible){outline:2px solid var(--highlight);outline-offset:2px}
+.animation-channel-label{font-size:11px;white-space:nowrap}
+.animation-channel-status{min-width:19px;font-size:10px;color:var(--muted);font-weight:600}
+.animation-switch-track{display:inline-flex;align-items:center;width:26px;height:16px;padding:2px;border-radius:20px;background:var(--line);flex-shrink:0}
+.animation-switch-track>span{width:12px;height:12px;border-radius:50%;background:#fffaf2;box-shadow:0 1px 2px #252a3a26;transform:translateX(0)}
+.animation-channel.is-on .animation-switch-track{background:var(--coral)}
+.animation-channel.is-on .animation-switch-track>span{transform:translateX(10px)}
+.animation-channel.is-on .animation-channel-status{color:var(--text)}
+.display-options-note{margin:0;color:var(--muted);font-size:9px;line-height:1.5;max-width:68ch}
+@media(max-width:380px){.display-options legend{width:100%;padding:0}.display-options{gap:4px}.display-choice{padding:7px 8px}.display-options-note{font-size:9px}}

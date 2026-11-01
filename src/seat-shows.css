@@ -1,0 +1,7 @@
+/* Reserve the theatre before the first move so neither names nor the board jump. */
+.player-seat.has-player-show{display:grid;grid-template-columns:auto minmax(66px,1fr) minmax(150px,2fr) auto;gap:9px;height:auto;min-height:80px;padding-block:8px}
+.player-seat.has-player-show .player-details{min-width:0}
+.player-seat.has-player-show .player-show{grid-column:3;grid-row:1;min-width:0}
+.player-seat.has-player-show .player-clock{grid-column:4;grid-row:1}
+.player-seat.has-player-show .player-meta{flex-wrap:wrap;font-size:9px}
+@media(max-width:1050px){.player-seat.has-player-show{grid-template-columns:auto minmax(0,1fr) auto;gap:6px}.player-seat.has-player-show .player-show{grid-column:1/-1;grid-row:2}.player-seat.has-player-show .player-clock{grid-column:3;grid-row:1}.player-seat.has-player-show .player-avatar{grid-column:1;grid-row:1}.player-seat.has-player-show .player-details{grid-column:2;grid-row:1}}

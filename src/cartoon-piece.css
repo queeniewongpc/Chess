@@ -1,0 +1,35 @@
+.cartoon-piece {
+  overflow: visible;
+  pointer-events: none;
+  flex-shrink: 0;
+  shape-rendering: geometricPrecision;
+}
+
+/* Both rooms share one porcelain collection; only the table around it changes. */
+:root {
+  --toon-white-coat: #f2e7cf;
+  --toon-white-shade: #c4b28e;
+  --toon-white-highlight: #fffdf3;
+  --toon-white-ink: #293346;
+  --toon-black-coat: #30394b;
+  --toon-black-shade: #161e2b;
+  --toon-black-highlight: #626e80;
+  --toon-black-ink: #f3dfb5;
+  --toon-gold: #bda06a;
+  --toon-gold-light: #ead4a6;
+  --toon-gold-shade: #93703b;
+  --toon-pedestal: #273346;
+  --toon-pedestal-light: #506076;
+}
+
+
+/* The raster carries the sculpted glaze and contact shadow; never flatten it
+   with the old icon-outline styling or a strong synthetic drop shadow. */
+.porcelain-rendered {
+  image-rendering: auto;
+  isolation: isolate;
+}
+.porcelain-sprite-cell { overflow: hidden; }
+.porcelain-rendered .porcelain-sprite-cell image { pointer-events: none; }
+.porcelain-rendered.porcelain-inactive { filter: saturate(.12); opacity: .62; }
+.porcelain-maker-mark { pointer-events: none; }

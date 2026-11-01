@@ -1,0 +1,45 @@
+/* One wordmark face across every game theme and decorative appearance. */
+:root {
+  --brand-font:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --brand-weight:700;
+}
+
+body :is(.brand-wordmark,.footer-brand,.hero-wordmark-letters,.queen-delight-lettering) {
+  font-family:var(--brand-font);
+  font-weight:var(--brand-weight);
+  font-style:normal;
+  font-synthesis:none;
+  letter-spacing:-.035em;
+}
+
+body :is(.brand-wordmark,.footer-brand)>span {
+  font-family:var(--brand-font);
+  font-weight:500;
+  font-style:normal;
+}
+
+body .brand-wordmark-crowned .brand-name {
+  display:block;
+  font:inherit;
+  font-weight:var(--brand-weight);
+  white-space:nowrap;
+}
+body .brand-initial {
+  position:relative;
+  display:inline-block;
+}
+body .brand-crown {
+  position:absolute;
+  width:.57em;
+  height:.43em;
+  left:.12em;
+  top:-.30em;
+  color:#bd965b;
+  transform:rotate(-8deg);
+  filter:drop-shadow(0 1px 0 #fff8);
+  pointer-events:none;
+}
+body.arena-theme .brand-crown {
+  color:#dbb777;
+  filter:drop-shadow(0 1px 1px #1119);
+}

@@ -1,0 +1,31 @@
+/* Player shows live in the seat cards, outside the playable board. */
+.party-seats.has-player-shows { align-items:start; }
+.party-seat.has-player-show { display:flex;flex-direction:column;align-items:stretch;gap:5px; }
+.party-seat.has-player-show > .party-seat-header { display:flex;align-items:center;gap:6px;min-width:0;flex:none; }
+.party-seat-header > svg { width:24px;height:28px;flex-shrink:0; }
+.party-seat-header > div { min-width:0;flex:1; }
+.party-seat-header > .party-clock { flex-shrink:0; }
+.party-seat.has-player-show > .party-show-slot { position:relative;width:100%;height:104px;min-width:0;flex:none;overflow:hidden; }
+.party-show-inner { position:absolute;left:50%;top:50%;height:64px;transform-origin:center; }
+.party-seats.is-online-shows .party-seat.has-player-show {
+  grid-column:1 / -1;order:-1;display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(100px,.9fr);gap:10px;align-items:center;
+}
+.party-seats.is-online-shows .party-seat.has-player-show > .party-show-slot { height:64px; }
+
+@media(min-width:951px) {
+  .party-seats.is-local-shows { grid-template-columns:repeat(var(--party-seat-count),minmax(0,1fr)); }
+  .party-seats.is-local-shows .party-seat-header { flex-wrap:wrap; }
+  .party-seats.is-local-shows .party-seat-header > .party-clock { margin-left:auto; }
+}
+
+@media(max-width:950px) {
+  .party-seat.has-player-show > .party-seat-header { gap:3px; }
+  .party-seat-header > svg { width:20px;height:24px; }
+}
+
+@media(max-width:380px) {
+  .party-seats.is-online-shows .party-seat.has-player-show { grid-template-columns:minmax(0,1fr) minmax(100px,.95fr);gap:5px; }
+  .party-seat.has-player-show > .party-seat-header { flex-wrap:wrap;column-gap:3px;row-gap:1px; }
+  .party-seat-header > .party-clock { margin-left:auto; }
+}

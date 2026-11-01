@@ -1,0 +1,63 @@
+.board-column { position:relative; }
+.queen-delight {
+  --delight-color:var(--forest);
+  --delight-faded:var(--muted);
+  --delight-background:var(--cream);
+  position:absolute;
+  z-index:12;
+  width:max-content;
+  max-width:calc(100% - 16px);
+  color:var(--delight-color);
+  box-shadow:none;
+  text-shadow:none;
+  pointer-events:none;
+  user-select:none;
+  animation:queenie-delight-dissolve var(--delight-duration) ease-out both;
+}
+/* Keep placement measurements steady while the visible signature tilts. */
+.queen-delight-mark {
+  display:block;
+  padding:2px 4px;
+  border:0;
+  border-radius:3px;
+  background:var(--delight-background);
+  transform:rotate(-7deg);
+  transform-origin:center;
+}
+.queen-delight-lettering {
+  display:flex;
+  white-space:nowrap;
+  font-size:11px;
+  line-height:1.2;
+}
+.queen-delight-letter {
+  display:inline-block;
+  transform:rotate(var(--letter-tilt));
+  transform-origin:50% 90%;
+}
+body.arena-theme .queen-delight {
+  --delight-color:var(--arena-cream);
+  --delight-faded:var(--arena-muted);
+  --delight-background:var(--arena-deep);
+}
+@keyframes queenie-delight-dissolve {
+  0%,42% { color:var(--delight-color);opacity:1; }
+  72% { color:var(--delight-faded);opacity:.65; }
+  100% { color:var(--delight-faded);opacity:0; }
+}
+@media(prefers-reduced-motion:no-preference) {
+  .queen-delight-letter {
+    animation:queenie-delight-hop 450ms cubic-bezier(.22,.61,.36,1) both;
+    animation-delay:calc(var(--letter-index) * 28ms);
+  }
+  @keyframes queenie-delight-hop {
+    0% { transform:translateY(3px) rotate(-12deg); }
+    35% { transform:translateY(-3px) rotate(6deg); }
+    60% { transform:translateY(1px) rotate(var(--letter-tilt)); }
+    80% { transform:translateY(-1px) rotate(var(--letter-tilt)); }
+    100% { transform:translateY(0) rotate(var(--letter-tilt)); }
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  .queen-delight-letter { animation:none; }
+}

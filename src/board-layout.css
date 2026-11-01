@@ -1,0 +1,97 @@
+/* One page scroll, with the board following the setup in every desktop mode. */
+@media (min-width: 761px) {
+  .play-layout > .board-column[data-board-sticky="true"]:not(:fullscreen) {
+    position: sticky;
+    top: var(--board-sticky-top, 16px);
+    align-self: start;
+    scroll-margin-top: 16px;
+  }
+
+  .board-column[data-board-sticky="true"]:not(:fullscreen) .board-frame {
+    width: min(100%, var(--board-fit-width, 100%));
+    margin-inline: auto;
+  }
+}
+
+/* Keep the pieces usable on laptops by reclaiming space around the board first. */
+@media (min-width: 761px) and (max-height: 800px) {
+  .board-column[data-board-sticky="true"]:not(:fullscreen) .board-heading {
+    min-height: 40px;
+    margin-bottom: 8px;
+    gap: 5px;
+  }
+
+  .board-column[data-board-sticky="true"]:not(:fullscreen) .board-heading h2 {
+    font-size: 17px;
+    line-height: 1.35;
+    margin: 4px 0 2px;
+  }
+
+  .board-column[data-board-sticky="true"]:not(:fullscreen) .player-seat {
+    height: auto;
+    min-height: 52px;
+    padding-block: 6px;
+  }
+
+  .board-column[data-board-sticky="true"]:not(:fullscreen) .player-avatar {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+  }
+
+  .board-column[data-board-sticky="true"]:not(:fullscreen) .player-avatar svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .board-column[data-board-sticky="true"]:not(:fullscreen) .player-clock {
+    font-size: 19px;
+    min-width: 74px;
+    padding: 4px 7px;
+    flex-shrink: 0;
+  }
+
+  .board-column[data-board-sticky="true"]:not(:fullscreen) .board-toolbar {
+    padding: 8px 1px 5px;
+  }
+
+  .board-column[data-board-sticky="true"]:not(:fullscreen) .move-hints-explanation {
+    margin: 3px 0 6px;
+  }
+
+  .board-column[data-board-sticky="true"]:not(:fullscreen) .board-footnote {
+    margin-top: 4px;
+  }
+}
+
+@media (min-width: 761px) and (max-height: 560px) {
+  .board-column[data-board-sticky="true"]:not(:fullscreen) .board-heading {
+    min-height: 30px;
+    margin-bottom: 6px;
+  }
+
+  .board-column[data-board-sticky="true"]:not(:fullscreen) .board-heading .eyebrow,
+  .board-column[data-board-sticky="true"]:not(:fullscreen) .board-footnote {
+    display: none;
+  }
+
+  .board-column[data-board-sticky="true"]:not(:fullscreen) .player-seat {
+    min-height: 44px;
+    padding-block: 3px;
+  }
+
+  .board-column[data-board-sticky="true"]:not(:fullscreen) .player-avatar {
+    width: 28px;
+    height: 28px;
+  }
+
+  .board-column[data-board-sticky="true"]:not(:fullscreen) .player-avatar svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .board-column[data-board-sticky="true"]:not(:fullscreen) .player-clock {
+    font-size: 18px;
+    padding-block: 3px;
+  }
+}
