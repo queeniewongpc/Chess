@@ -1,0 +1,239 @@
+{
+  "recordedDate": "2026-10-25",
+  "source": "Actual Play online gameplay from standard starting positions, controlled through separate local browser clients and a real Socket.IO game server",
+  "connection": "Play online",
+  "networkScope": "Local loopback only; independent browser seats, not separate physical devices or an internet deployment",
+  "serverPersistence": "Isolated in-memory rooms; owner saved games unchanged",
+  "pieceStyle": "Cartoon",
+  "animations": {
+    "onBoard": true,
+    "byPlayers": true
+  },
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "encoding": "Silent H.264 MP4, 30 fps with timestamped screenshot holds; no motion interpolation, animation speed change, or gameplay cuts",
+  "sampling": "Approximately 7–9 distinct screenshots per second over each source sequence, with individual gaps up to 0.63 seconds; 30 fps describes encoding, not screen capture",
+  "moveTimeMeaning": "Approximate UI action completion in seconds relative to the first captured frame (video start)",
+  "onlinePresentation": "Upright player names and characters; player-side animation only beside the viewing seat",
+  "sameDeviceComparison": "The same moves and nearly identical durations as artifacts/demo-sequences.json; 1.7 ms export rounding in the multiplayer files",
+  "clips": [
+    {
+      "title": "Classic chess · Play online",
+      "players": 2,
+      "file": "queenie-demo-remote-classic.mp4",
+      "viewer": {
+        "color": "w",
+        "label": "White",
+        "name": "Alex"
+      },
+      "setupBeforeRecording": [],
+      "recordedMoves": [
+        {
+          "from": "e2",
+          "to": "e4",
+          "color": "w",
+          "capture": false,
+          "time": 0.2415
+        },
+        {
+          "from": "d7",
+          "to": "d5",
+          "color": "b",
+          "capture": false,
+          "time": 2.4715
+        },
+        {
+          "from": "e4",
+          "to": "d5",
+          "color": "w",
+          "capture": true,
+          "time": 4.7125
+        },
+        {
+          "from": "d8",
+          "to": "d5",
+          "color": "b",
+          "capture": true,
+          "time": 8.0585
+        }
+      ],
+      "capturedFrames": 101,
+      "includedCapturedFrames": 101,
+      "firstCaptureSeconds": 0.1545,
+      "lastCaptureSeconds": 11.5095,
+      "averageSourceCaptureFps": 8.807,
+      "maximumSourceCaptureGapSeconds": 0.5195,
+      "encodedDurationSeconds": 11.8,
+      "encodedBytes": 4510764,
+      "sha256": "6274bc85fc486abad4bd51f57a51ca2214d47170f712533483e4c4a71e855eaf",
+      "sameDeviceDurationSeconds": 11.8,
+      "finalScreenshotHeldSeconds": 0.445,
+      "verification": {
+        "independentClients": 2,
+        "matchingFinalPublicHistory": true,
+        "finalHistoryPlies": 4,
+        "browserWarnings": 0,
+        "browserErrors": 0,
+        "codec": "avc1",
+        "decodedContactAndCelebration": true,
+        "cameraHeaderMaximumMeanPixelDifference": 0.0
+      },
+      "poster": "queenie-demo-remote-classic-poster.png",
+      "medianSourceCaptureGapSeconds": 0.101
+    },
+    {
+      "title": "Three-player Free for All · Play online",
+      "players": 3,
+      "file": "queenie-demo-remote-three-players.mp4",
+      "viewer": {
+        "color": "yellow",
+        "label": "Yellow",
+        "name": "Jordan"
+      },
+      "setupBeforeRecording": [
+        {
+          "from": "re2",
+          "to": "re4"
+        },
+        {
+          "from": "be2",
+          "to": "be4"
+        },
+        {
+          "from": "ye2",
+          "to": "ye4"
+        }
+      ],
+      "recordedMoves": [
+        {
+          "from": "rd1",
+          "to": "rg4",
+          "color": "red",
+          "capture": false,
+          "time": 0.296
+        },
+        {
+          "from": "be4",
+          "to": "re4",
+          "color": "blue",
+          "capture": true,
+          "time": 2.558
+        },
+        {
+          "from": "yf1",
+          "to": "rg4",
+          "color": "yellow",
+          "capture": true,
+          "time": 5.945
+        }
+      ],
+      "capturedFrames": 71,
+      "includedCapturedFrames": 71,
+      "firstCaptureSeconds": 0.173,
+      "lastCaptureSeconds": 9.466,
+      "averageSourceCaptureFps": 7.533,
+      "maximumSourceCaptureGapSeconds": 0.601,
+      "encodedDurationSeconds": 9.501667,
+      "encodedBytes": 4279311,
+      "sha256": "e26c3f9ad77a3e6561d5ddc77398906ae9d76a677058bc3d9a051e585e63eca6",
+      "sameDeviceDurationSeconds": 9.503333,
+      "finalScreenshotHeldSeconds": 0.208667,
+      "verification": {
+        "independentClients": 3,
+        "matchingFinalPublicHistory": true,
+        "finalHistoryPlies": 6,
+        "browserWarnings": 0,
+        "browserErrors": 0,
+        "codec": "avc1",
+        "decodedContactAndCelebration": true,
+        "cameraHeaderMaximumMeanPixelDifference": 0.0
+      },
+      "poster": "queenie-demo-remote-three-players-poster.png",
+      "medianSourceCaptureGapSeconds": 0.10325
+    },
+    {
+      "title": "Four-player Free for All · Play online",
+      "players": 4,
+      "file": "queenie-demo-remote-four-players.mp4",
+      "viewer": {
+        "color": "green",
+        "label": "Green",
+        "name": "Taylor"
+      },
+      "setupBeforeRecording": [
+        {
+          "from": "d2",
+          "to": "d4"
+        },
+        {
+          "from": "b5",
+          "to": "c5"
+        },
+        {
+          "from": "k13",
+          "to": "k11"
+        },
+        {
+          "from": "m10",
+          "to": "l10"
+        }
+      ],
+      "recordedMoves": [
+        {
+          "from": "d4",
+          "to": "c5",
+          "color": "red",
+          "capture": true,
+          "time": 0.4065
+        },
+        {
+          "from": "b7",
+          "to": "d7",
+          "color": "blue",
+          "capture": false,
+          "time": 3.7705
+        },
+        {
+          "from": "k11",
+          "to": "l10",
+          "color": "yellow",
+          "capture": true,
+          "time": 6.1435
+        },
+        {
+          "from": "m11",
+          "to": "l10",
+          "color": "green",
+          "capture": true,
+          "time": 9.5985
+        }
+      ],
+      "capturedFrames": 90,
+      "includedCapturedFrames": 89,
+      "firstCaptureSeconds": 0.0705,
+      "lastCaptureSeconds": 12.9725,
+      "averageSourceCaptureFps": 6.898,
+      "maximumSourceCaptureGapSeconds": 0.63,
+      "encodedDurationSeconds": 12.851667,
+      "encodedBytes": 5386596,
+      "sha256": "3fd5c4e2938d74214a518a874cac989971fbd39b8f16a64b20bfe43f68f69abc",
+      "sameDeviceDurationSeconds": 12.853333,
+      "finalScreenshotHeldSeconds": 0.052167,
+      "verification": {
+        "independentClients": 4,
+        "matchingFinalPublicHistory": true,
+        "finalHistoryPlies": 8,
+        "browserWarnings": 0,
+        "browserErrors": 0,
+        "codec": "avc1",
+        "decodedContactAndCelebration": true,
+        "cameraHeaderMaximumMeanPixelDifference": 0.0
+      },
+      "endTreatment": "The last source screenshot occurs after the target duration and is omitted; the preceding screenshot is held through the end. The final 3.2-second capture show has completed.",
+      "poster": "queenie-demo-remote-four-players-poster.png",
+      "medianSourceCaptureGapSeconds": 0.118
+    }
+  ]
+}

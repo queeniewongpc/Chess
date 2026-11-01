@@ -1,0 +1,168 @@
+{
+  "recordedDate": "2026-10-25",
+  "source": "Actual local browser gameplay from standard starting positions",
+  "connection": "Same device",
+  "pieceStyle": "Cartoon",
+  "animations": {
+    "onBoard": true,
+    "byPlayers": true
+  },
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "encoding": "H.264 MP4, 30 fps with timestamped screenshot holds; no motion interpolation or animation speed change",
+  "clips": [
+    {
+      "title": "Classic chess",
+      "players": 2,
+      "file": "queenie-demo-classic.mp4",
+      "setupBeforeRecording": [],
+      "recordedMoves": [
+        {
+          "from": "e2",
+          "to": "e4",
+          "time": 0.6005,
+          "capture": false
+        },
+        {
+          "from": "d7",
+          "to": "d5",
+          "time": 2.8575,
+          "capture": false
+        },
+        {
+          "from": "e4",
+          "to": "d5",
+          "time": 5.1315,
+          "capture": true
+        },
+        {
+          "from": "d8",
+          "to": "d5",
+          "time": 8.4815,
+          "capture": true
+        }
+      ],
+      "capturedFrames": 106,
+      "firstCaptureSeconds": 0.1445,
+      "lastCaptureSeconds": 11.9115,
+      "sameDeviceSeatAngles": [
+        0,
+        180
+      ],
+      "encodedDurationSeconds": 11.8,
+      "encodedBytes": 4610383
+    },
+    {
+      "title": "Three-player Free for All",
+      "players": 3,
+      "file": "queenie-demo-three-players.mp4",
+      "setupBeforeRecording": [
+        {
+          "from": "re2",
+          "to": "re4"
+        },
+        {
+          "from": "be2",
+          "to": "be4"
+        },
+        {
+          "from": "ye2",
+          "to": "ye4"
+        }
+      ],
+      "recordedMoves": [
+        {
+          "from": "rd1",
+          "to": "rg4",
+          "time": 0.363,
+          "capture": false
+        },
+        {
+          "from": "be4",
+          "to": "re4",
+          "time": 2.697,
+          "capture": true
+        },
+        {
+          "from": "yf1",
+          "to": "rg4",
+          "time": 6.136,
+          "capture": true
+        }
+      ],
+      "capturedFrames": 83,
+      "firstCaptureSeconds": 0.194,
+      "lastCaptureSeconds": 9.6655,
+      "sameDeviceSeatAngles": [
+        0,
+        120,
+        240
+      ],
+      "encodedDurationSeconds": 9.503333,
+      "encodedBytes": 4350092
+    },
+    {
+      "title": "Four-player Free for All",
+      "players": 4,
+      "file": "queenie-demo-four-players.mp4",
+      "setupBeforeRecording": [
+        {
+          "from": "d2",
+          "to": "d4"
+        },
+        {
+          "from": "b5",
+          "to": "c5"
+        },
+        {
+          "from": "k13",
+          "to": "k11"
+        },
+        {
+          "from": "m10",
+          "to": "l10"
+        }
+      ],
+      "recordedMoves": [
+        {
+          "from": "d4",
+          "to": "c5",
+          "time": 0.3445,
+          "capture": true
+        },
+        {
+          "from": "b7",
+          "to": "d7",
+          "time": 3.7675,
+          "capture": false
+        },
+        {
+          "from": "k11",
+          "to": "l10",
+          "time": 6.0855,
+          "capture": true
+        },
+        {
+          "from": "m11",
+          "to": "l10",
+          "time": 9.4875,
+          "capture": true
+        }
+      ],
+      "capturedFrames": 113,
+      "firstCaptureSeconds": 0.1505,
+      "lastCaptureSeconds": 12.972,
+      "sameDeviceSeatAngles": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "encodedDurationSeconds": 12.853333,
+      "encodedBytes": 5386202
+    }
+  ],
+  "moveTimeMeaning": "Approximate UI action completion in seconds relative to the first captured frame (video start)."
+}
