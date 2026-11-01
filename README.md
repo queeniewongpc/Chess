@@ -1,4 +1,4 @@
-# Queenie’s
+# Queenie’s Chess Game
 
 **CHESS FOR YOUR CREW**
 
