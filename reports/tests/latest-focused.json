@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "scope": "focused",
+  "startedAt": "2026-10-25T19:41:41.542Z",
+  "finishedAt": "2026-10-25T19:41:41.779Z",
+  "nodeVersion": "v24.21.0",
+  "command": [
+    "node",
+    "--test",
+    "--test-reporter=tap",
+    "server/setupDefaults.test.js"
+  ],
+  "testFiles": [
+    "server/setupDefaults.test.js"
+  ],
+  "source": {
+    "sha256": "6fdc91489993da77ed837a4cf1d77426c3b855ea487f1426873c639def5577c9",
+    "files": 69,
+    "unchangedDuringRun": true,
+    "sha256AfterRun": "6fdc91489993da77ed837a4cf1d77426c3b855ea487f1426873c639def5577c9"
+  },
+  "exitCode": 0,
+  "signal": null,
+  "totals": {
+    "tests": 6,
+    "suites": 0,
+    "pass": 6,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "duration_ms": 113.456792
+  },
+  "topLevelResults": [
+    {
+      "name": "first visits recommend Ask first for Classic and Free for the other game modes",
+      "status": "passed",
+      "durationMs": 0.584375
+    },
+    {
+      "name": "multiplayer starts with takebacks off and keeps a manual rule across player counts",
+      "status": "passed",
+      "durationMs": 0.111333
+    },
+    {
+      "name": "revisiting a mode restores its manual takeback choice",
+      "status": "passed",
+      "durationMs": 0.090583
+    },
+    {
+      "name": "custom positions share the Endgames preference without resetting edits",
+      "status": "passed",
+      "durationMs": 0.082208
+    },
+    {
+      "name": "mode recommendations preserve custom and unlimited allowances and other settings",
+      "status": "passed",
+      "durationMs": 0.091334
+    },
+    {
+      "name": "an existing mode preference is kept and input settings are never mutated",
+      "status": "passed",
+      "durationMs": 0.540166
+    }
+  ],
+  "limits": [
+    "Automated Node tests only; browser interaction, visual acceptance, build and packaging are separate checks."
+  ]
+}

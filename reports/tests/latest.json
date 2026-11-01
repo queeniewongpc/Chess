@@ -1,0 +1,817 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "scope": "full",
+  "startedAt": "2026-10-27T07:30:21.723Z",
+  "finishedAt": "2026-10-27T07:30:25.530Z",
+  "nodeVersion": "v24.19.0",
+  "command": [
+    "node",
+    "--test",
+    "--test-reporter=tap",
+    "server/animationPlayback.test.js",
+    "server/animationPreferences.test.js",
+    "server/boardLayout.test.js",
+    "server/game.test.js",
+    "server/index.test.js",
+    "server/localGame.test.js",
+    "server/moveHints.test.js",
+    "server/partyChess.test.js",
+    "server/partyPresentation.test.js",
+    "server/partySession.test.js",
+    "server/pieceCharacters.test.js",
+    "server/setupDefaults.test.js"
+  ],
+  "testFiles": [
+    "server/animationPlayback.test.js",
+    "server/animationPreferences.test.js",
+    "server/boardLayout.test.js",
+    "server/game.test.js",
+    "server/index.test.js",
+    "server/localGame.test.js",
+    "server/moveHints.test.js",
+    "server/partyChess.test.js",
+    "server/partyPresentation.test.js",
+    "server/partySession.test.js",
+    "server/pieceCharacters.test.js",
+    "server/setupDefaults.test.js"
+  ],
+  "source": {
+    "sha256": "9b6a7b17b3355fc364b67a368f35325faa52b764e57944b67a448dd2d8b5d82c",
+    "files": 73,
+    "unchangedDuringRun": true,
+    "sha256AfterRun": "9b6a7b17b3355fc364b67a368f35325faa52b764e57944b67a448dd2d8b5d82c"
+  },
+  "exitCode": 0,
+  "signal": null,
+  "totals": {
+    "tests": 151,
+    "suites": 0,
+    "pass": 151,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "duration_ms": 3670.862625
+  },
+  "topLevelResults": [
+    {
+      "name": "live move animates once despite repeated clock snapshots and acknowledgement",
+      "status": "passed",
+      "durationMs": 3.027167
+    },
+    {
+      "name": "reload, reconnect, off/on, style change, and undo never replay old moves",
+      "status": "passed",
+      "durationMs": 2.796333
+    },
+    {
+      "name": "quick independent moves overlap, but a capture clears the victim’s older motion",
+      "status": "passed",
+      "durationMs": 2.024208
+    },
+    {
+      "name": "a shorter new show permanently supersedes an older capture instead of replaying it after completion",
+      "status": "passed",
+      "durationMs": 1.188916
+    },
+    {
+      "name": "a board-only move does not cancel the currently playing capture scene",
+      "status": "passed",
+      "durationMs": 0.362084
+    },
+    {
+      "name": "capture respects all four independent location combinations, including both off",
+      "status": "passed",
+      "durationMs": 0.296667
+    },
+    {
+      "name": "finishing either location leaves the other location playing until it finishes",
+      "status": "passed",
+      "durationMs": 0.308
+    },
+    {
+      "name": "superseded shows cannot interrupt board fights, and reduced motion has a short expiry",
+      "status": "passed",
+      "durationMs": 2.064792
+    },
+    {
+      "name": "new devices default to cartoon artwork with both animation channels on",
+      "status": "passed",
+      "durationMs": 4.948083
+    },
+    {
+      "name": "the fresh defaults never replace an explicitly disabled stored channel",
+      "status": "passed",
+      "durationMs": 0.592458
+    },
+    {
+      "name": "all six effective artwork/channel combinations survive storage normalization",
+      "status": "passed",
+      "durationMs": 2.205875
+    },
+    {
+      "name": "the two cartoon animation switches are independent and never change artwork",
+      "status": "passed",
+      "durationMs": 0.257625
+    },
+    {
+      "name": "Classic hides board motion while remembering it and never enables the player-side show implicitly",
+      "status": "passed",
+      "durationMs": 0.281834
+    },
+    {
+      "name": "the original two-key settings migrate without changing the previously visible artwork",
+      "status": "passed",
+      "durationMs": 0.249792
+    },
+    {
+      "name": "the previous independent artwork plus exclusive animation selection migrates to the matching channels",
+      "status": "passed",
+      "durationMs": 0.168833
+    },
+    {
+      "name": "new per-channel values take precedence over legacy keys independently and idempotently",
+      "status": "passed",
+      "durationMs": 0.174041
+    },
+    {
+      "name": "unknown stored values and invalid channel actions safely preserve preferences without mutation",
+      "status": "passed",
+      "durationMs": 0.36525
+    },
+    {
+      "name": "short laptop windows retain the tall board instead of disabling sticky layout",
+      "status": "passed",
+      "durationMs": 1.488167
+    },
+    {
+      "name": "every board shape fits with square cells and never exceeds its available column",
+      "status": "passed",
+      "durationMs": 0.367084
+    },
+    {
+      "name": "very narrow desktop columns never overflow to enforce the preferred square size",
+      "status": "passed",
+      "durationMs": 0.262958
+    },
+    {
+      "name": "a hidden or unmeasurable board does not produce invalid CSS dimensions",
+      "status": "passed",
+      "durationMs": 0.903084
+    },
+    {
+      "name": "multiplayer format defaults to free-for-all and validates fixed four-player teams",
+      "status": "passed",
+      "durationMs": 8.773458
+    },
+    {
+      "name": "settings enforce finite positive takeback budgets and bounded non-empty half rosters",
+      "status": "passed",
+      "durationMs": 2.225917
+    },
+    {
+      "name": "half board respects boundaries and sliding blockers, omits double pawn pushes, and requires promotion choice",
+      "status": "passed",
+      "durationMs": 1.574542
+    },
+    {
+      "name": "half chess permits capturing a king but only ends when the last opposing piece is captured",
+      "status": "passed",
+      "durationMs": 2.448792
+    },
+    {
+      "name": "single-pawn half rosters are playable and repeated positions draw without insufficient-material rules",
+      "status": "passed",
+      "durationMs": 1.07
+    },
+    {
+      "name": "all classic endgames load, retain their side to move, and support custom sparse positions",
+      "status": "passed",
+      "durationMs": 13.631167
+    },
+    {
+      "name": "half-board shapes validate, old settings retain the wide board, and both shapes fit complete armies",
+      "status": "passed",
+      "durationMs": 1.104167
+    },
+    {
+      "name": "four-file movement reaches rank eight while enforcing file bounds and blockers",
+      "status": "passed",
+      "durationMs": 0.558666
+    },
+    {
+      "name": "four-file pawns promote on ranks eight and one, with promotion and capture restored by undo",
+      "status": "passed",
+      "durationMs": 8.497875
+    },
+    {
+      "name": "four-file single-pawn armies have playable staggered openings and retain capture-all rules",
+      "status": "passed",
+      "durationMs": 0.86425
+    },
+    {
+      "name": "full-board arenas start from standard piece squares while preserving arena movement rules and legacy defaults",
+      "status": "passed",
+      "durationMs": 9.806459
+    },
+    {
+      "name": "arena placement rejects malformed, overlapping, out-of-bounds, wrong-roster and wrong-territory payloads",
+      "status": "passed",
+      "durationMs": 67.065833
+    },
+    {
+      "name": "arena editor moves and swaps preserve full rosters, enforce territory, and never mutate input positions",
+      "status": "passed",
+      "durationMs": 12.011709
+    },
+    {
+      "name": "arbitrary full-board arena positions allow far-rank pawns and capturable kings without changing capture-all",
+      "status": "passed",
+      "durationMs": 3.992167
+    },
+    {
+      "name": "legacy king toggles migrate once while new arena rosters retain independent king counts",
+      "status": "passed",
+      "durationMs": 1.037834
+    },
+    {
+      "name": "capture-king drafts remain editable but strict game creation requires one king on each side",
+      "status": "passed",
+      "durationMs": 1.48275
+    },
+    {
+      "name": "both arena win conditions capture kings normally, but only capture-king ends immediately across every board shape",
+      "status": "passed",
+      "durationMs": 5.168458
+    },
+    {
+      "name": "two remote clients share the same board and cannot overwrite it with stale moves",
+      "status": "passed",
+      "durationMs": 181.833084
+    },
+    {
+      "name": "the server rejects illegal moves, out-of-turn moves, and unseated clients",
+      "status": "passed",
+      "durationMs": 41.348375
+    },
+    {
+      "name": "checkmate ends the game and a rematch requires both players",
+      "status": "passed",
+      "durationMs": 58.954833
+    },
+    {
+      "name": "special moves preserve castling, en passant, and the selected promotion piece",
+      "status": "passed",
+      "durationMs": 289.945875
+    },
+    {
+      "name": "a disconnected player can resume their reserved seat with their private token",
+      "status": "passed",
+      "durationMs": 47.091334
+    },
+    {
+      "name": "persisted games survive a server restart and both seats can reconnect",
+      "status": "passed",
+      "durationMs": 92.232083
+    },
+    {
+      "name": "the server owns clock accounting, applies increments, and settles timeouts",
+      "status": "passed",
+      "durationMs": 18.232542
+    },
+    {
+      "name": "a draw needs an opponent response and resignation awards the opponent",
+      "status": "passed",
+      "durationMs": 32.798875
+    },
+    {
+      "name": "leaving a room releases the connection but preserves the player seat",
+      "status": "passed",
+      "durationMs": 42.1665
+    },
+    {
+      "name": "both players confirm rules; changing rules clears confirmations and stale confirmations fail",
+      "status": "passed",
+      "durationMs": 34.392792
+    },
+    {
+      "name": "terminal starting positions are rejected without altering a waiting room or its confirmations",
+      "status": "passed",
+      "durationMs": 47.615417
+    },
+    {
+      "name": "free takebacks apply immediately, consume individual move budgets, and reject stale moves even after replay",
+      "status": "passed",
+      "durationMs": 63.137833
+    },
+    {
+      "name": "approval takebacks freeze moves, reject self-approval, and consume allowance only when accepted",
+      "status": "passed",
+      "durationMs": 56.586125
+    },
+    {
+      "name": "undo approval time is charged to the requester and takebacks do not restore spent clock time",
+      "status": "passed",
+      "durationMs": 39.221
+    },
+    {
+      "name": "half-board multiplayer captures kings normally, finishes on capture-all, and rematches the chosen roster",
+      "status": "passed",
+      "durationMs": 31.293
+    },
+    {
+      "name": "variant settings, history, undo budgets, and version survive a server restart",
+      "status": "passed",
+      "durationMs": 86.306667
+    },
+    {
+      "name": "remote half-board shape changes require fresh consent and synchronize four-file play, takebacks and rematches",
+      "status": "passed",
+      "durationMs": 18.972958
+    },
+    {
+      "name": "four-file remote games reconstruct their geometry and undo history after a server restart",
+      "status": "passed",
+      "durationMs": 38.828458
+    },
+    {
+      "name": "remote custom arenas validate placement, reset agreement, and retain the agreed board through restart, undo and rematch",
+      "status": "passed",
+      "durationMs": 29.215625
+    },
+    {
+      "name": "online capture-king drafts allow removing and restoring a king, survive restart, and reject readiness without mutating consent",
+      "status": "passed",
+      "durationMs": 32.538416
+    },
+    {
+      "name": "remote king capture immediately finishes the chosen mode and restores the same result after restart",
+      "status": "passed",
+      "durationMs": 25.426875
+    },
+    {
+      "name": "one shared local confirmation starts every seat with names and clocks for two, three and four players",
+      "status": "passed",
+      "durationMs": 304.727458
+    },
+    {
+      "name": "shared local start still rejects invalid settings and unplayable positions",
+      "status": "passed",
+      "durationMs": 1.291291
+    },
+    {
+      "name": "local approval time charges the requester, rejection resumes the active clock, and accepted undo never refunds time",
+      "status": "passed",
+      "durationMs": 31.228291
+    },
+    {
+      "name": "free local takebacks remove earned increments and cannot farm time through repeated replay",
+      "status": "passed",
+      "durationMs": 26.021916
+    },
+    {
+      "name": "local persistence reconstructs the variant, history, pending consent and undo clock history",
+      "status": "passed",
+      "durationMs": 21.953458
+    },
+    {
+      "name": "local expiry is settled immediately on actions and restoration, including approval requester timeout",
+      "status": "passed",
+      "durationMs": 8.517834
+    },
+    {
+      "name": "local stale board actions, self approval, and over-budget undo are rejected",
+      "status": "passed",
+      "durationMs": 13.817791
+    },
+    {
+      "name": "local four-file games preserve shape, history and consent across reload; older saves remain eight-file games",
+      "status": "passed",
+      "durationMs": 2.721708
+    },
+    {
+      "name": "local full-board arena reload and takeback preserve the agreed custom arrangement",
+      "status": "passed",
+      "durationMs": 1.333375
+    },
+    {
+      "name": "local arena king-capture results and continued capture-all games survive save and restore",
+      "status": "passed",
+      "durationMs": 1.549
+    },
+    {
+      "name": "hints identify movable pieces, then only legal destinations for the selected piece",
+      "status": "passed",
+      "durationMs": 11.2375
+    },
+    {
+      "name": "en passant is marked as a capture even though its destination square is empty",
+      "status": "passed",
+      "durationMs": 23.5145
+    },
+    {
+      "name": "promotion choices share one destination marker and blocked pieces show no targets",
+      "status": "passed",
+      "durationMs": 1.888541
+    },
+    {
+      "name": "disabled hints and noninteractive turns reveal no move markers",
+      "status": "passed",
+      "durationMs": 13.867291
+    },
+    {
+      "name": "3-player board has the advertised real geometry, standard armies and clockwise turn order",
+      "status": "passed",
+      "durationMs": 163.007166
+    },
+    {
+      "name": "3-player castling moves the original rook and is forbidden through check",
+      "status": "passed",
+      "durationMs": 7.452
+    },
+    {
+      "name": "3-player promotion requires an explicit legal choice and undo restores the pawn",
+      "status": "passed",
+      "durationMs": 2.098584
+    },
+    {
+      "name": "3-player repetition and fifty complete rounds yield a draw",
+      "status": "passed",
+      "durationMs": 180.400542
+    },
+    {
+      "name": "4-player board has the advertised real geometry, standard armies and clockwise turn order",
+      "status": "passed",
+      "durationMs": 190.537875
+    },
+    {
+      "name": "4-player castling moves the original rook and is forbidden through check",
+      "status": "passed",
+      "durationMs": 8.257916
+    },
+    {
+      "name": "4-player promotion requires an explicit legal choice and undo restores the pawn",
+      "status": "passed",
+      "durationMs": 2.19825
+    },
+    {
+      "name": "4-player repetition and fifty complete rounds yield a draw",
+      "status": "passed",
+      "durationMs": 318.804417
+    },
+    {
+      "name": "hex seams share the actual rendered edges, are reciprocal, and diagonal steps preserve tile shade",
+      "status": "passed",
+      "durationMs": 1.874041
+    },
+    {
+      "name": "hex bishops branch across the center and knights follow valid L paths to opposite-shade cells",
+      "status": "passed",
+      "durationMs": 2.540542
+    },
+    {
+      "name": "hex pawns cross a center file, keep their new forward direction, and may capture along either center branch",
+      "status": "passed",
+      "durationMs": 3.426
+    },
+    {
+      "name": "Party moves must protect their own king, cannot capture active kings, and ignore inactive attackers",
+      "status": "passed",
+      "durationMs": 8.021542
+    },
+    {
+      "name": "checkmate and stalemate eliminate at the beginning of that seat’s turn, and move undo restores the seat",
+      "status": "passed",
+      "durationMs": 10.098875
+    },
+    {
+      "name": "durable move and elimination events restore the same board and last surviving player wins",
+      "status": "passed",
+      "durationMs": 140.569208
+    },
+    {
+      "name": "2 vs 2 binds opposite partners without changing armies, board geometry or clockwise turns",
+      "status": "passed",
+      "durationMs": 90.658291
+    },
+    {
+      "name": "all six roles cannot capture a partner, and allied pieces block sliding and pawn movement",
+      "status": "passed",
+      "durationMs": 25.689
+    },
+    {
+      "name": "team kings ignore allied attacks but moving pieces must still protect their own king",
+      "status": "passed",
+      "durationMs": 5.213958
+    },
+    {
+      "name": "a player may rescue their checked partner or make another legal move before that partner’s turn",
+      "status": "passed",
+      "durationMs": 5.817375
+    },
+    {
+      "name": "team castling ignores allied attacks but still requires its own unmoved rook, clear path and enemy-safe transit",
+      "status": "passed",
+      "durationMs": 5.869417
+    },
+    {
+      "name": "team promotion retains the eighth-rank choice and does not introduce en passant",
+      "status": "passed",
+      "durationMs": 3.841333
+    },
+    {
+      "name": "checkmating either opposing army wins for both partners and undo restores the complete pre-move state",
+      "status": "passed",
+      "durationMs": 5.245708
+    },
+    {
+      "name": "team mate is adjudicated only at the affected seat’s turn, allowing intervening partner rescue",
+      "status": "passed",
+      "durationMs": 8.34975
+    },
+    {
+      "name": "team stalemate draws the entire game without eliminating an army, and undo reopens play",
+      "status": "passed",
+      "durationMs": 2.613125
+    },
+    {
+      "name": "team resignation and timeout end immediately for the whole side and persist as replayable team results",
+      "status": "passed",
+      "durationMs": 524.023084
+    },
+    {
+      "name": "team saved states cannot silently load as free-for-all, while legacy saves remain free-for-all",
+      "status": "passed",
+      "durationMs": 96.848834
+    },
+    {
+      "name": "teams retain threefold repetition and the 200-ply no-progress draw",
+      "status": "passed",
+      "durationMs": 275.46875
+    },
+    {
+      "name": "same-device seat strips face their unchanged four-player and three-player armies",
+      "status": "passed",
+      "durationMs": 13.99375
+    },
+    {
+      "name": "every online viewer has their own bottom strip with upright content and correctly rotated rivals",
+      "status": "passed",
+      "durationMs": 1.15575
+    },
+    {
+      "name": "3-player same-device names, complete turn cycle, persistence and legal moves remain consistent",
+      "status": "passed",
+      "durationMs": 205.433584
+    },
+    {
+      "name": "4-player same-device names, complete turn cycle, persistence and legal moves remain consistent",
+      "status": "passed",
+      "durationMs": 321.528291
+    },
+    {
+      "name": "party takebacks require every other seat, reject stale consent, and preserve clocks and independent budgets",
+      "status": "passed",
+      "durationMs": 114.957542
+    },
+    {
+      "name": "party free takebacks cannot generate clock time by replaying increment moves",
+      "status": "passed",
+      "durationMs": 86.391208
+    },
+    {
+      "name": "resignation and timeout eliminate one player, survive restoration, and cannot be crossed by takebacks",
+      "status": "passed",
+      "durationMs": 90.383
+    },
+    {
+      "name": "party unanimous draw needs only active seats and rejects self approval or eliminated actors",
+      "status": "passed",
+      "durationMs": 28.861583
+    },
+    {
+      "name": "3 independent remote seats start on the final arrival and receive the same authoritative moves",
+      "status": "passed",
+      "durationMs": 227.368416
+    },
+    {
+      "name": "4 independent remote seats start on the final arrival and receive the same authoritative moves",
+      "status": "passed",
+      "durationMs": 285.665375
+    },
+    {
+      "name": "party count changes wait for the configured number and lowering an unoccupied fourth seat starts play",
+      "status": "passed",
+      "durationMs": 48.263875
+    },
+    {
+      "name": "party waiting count changes cannot remove an occupied fourth seat or accept invalid settings",
+      "status": "passed",
+      "durationMs": 20.380041
+    },
+    {
+      "name": "party starts only after an occupied disconnected seat authenticates again, with no waiting-time clock charge",
+      "status": "passed",
+      "durationMs": 51.041292
+    },
+    {
+      "name": "persisted waiting party rooms do not start until every credentialed seat has reconnected",
+      "status": "passed",
+      "durationMs": 84.386
+    },
+    {
+      "name": "remote all-seat takeback consent, independent budgets, unanimous draw and complete rematch votes",
+      "status": "passed",
+      "durationMs": 222.6995
+    },
+    {
+      "name": "remote party persistence keeps credentials, eliminated seats, pending consent, and remaining clocks",
+      "status": "passed",
+      "durationMs": 245.621667
+    },
+    {
+      "name": "pending party consent charges its requester until timeout, then resumes remaining players",
+      "status": "passed",
+      "durationMs": 34.655375
+    },
+    {
+      "name": "server timeout removes one party seat and final resignation awards the last active player",
+      "status": "passed",
+      "durationMs": 29.599041
+    },
+    {
+      "name": "same-device teams preserve all four names, turn order, replay and independent takeback budgets",
+      "status": "passed",
+      "durationMs": 109.656042
+    },
+    {
+      "name": "a legal team mating move reaches the full shared result and freezes clocks without elimination",
+      "status": "passed",
+      "durationMs": 5.112083
+    },
+    {
+      "name": "a team resignation awards both opponents, ends all clocks and survives same-device restoration",
+      "status": "passed",
+      "durationMs": 105.754667
+    },
+    {
+      "name": "team pending takeback timeout loses the requester’s whole team without charging their partner",
+      "status": "passed",
+      "durationMs": 46.465375
+    },
+    {
+      "name": "team session restoration rejects changed team rules or winners and legacy saves remain free-for-all",
+      "status": "passed",
+      "durationMs": 79.589958
+    },
+    {
+      "name": "four remote teammates auto-start, control only their own army and synchronize local-equivalent moves",
+      "status": "passed",
+      "durationMs": 221.084667
+    },
+    {
+      "name": "team waiting rooms reject three-player teams, retain automatic start and lock agreed team rules",
+      "status": "passed",
+      "durationMs": 47.329625
+    },
+    {
+      "name": "teams still require all four seats for takebacks, draws and rematches",
+      "status": "passed",
+      "durationMs": 114.5795
+    },
+    {
+      "name": "remote team outcomes and pending consent survive server persistence without exposing seat credentials",
+      "status": "passed",
+      "durationMs": 130.899583
+    },
+    {
+      "name": "a remote team timeout awards the opposing pair immediately and stops every clock",
+      "status": "passed",
+      "durationMs": 23.6055
+    },
+    {
+      "name": "every starting physical piece has a unique deterministic character, including opposing and adjacent pawns",
+      "status": "passed",
+      "durationMs": 5.740917
+    },
+    {
+      "name": "captures feature the actual two pawns and keep immutable character snapshots across later moves",
+      "status": "passed",
+      "durationMs": 39.24225
+    },
+    {
+      "name": "undo, branch, and replay restore original characters instead of assigning a new pawn appearance",
+      "status": "passed",
+      "durationMs": 13.189042
+    },
+    {
+      "name": "en passant animates the pawn on the captured square, not an imaginary piece at the landing square",
+      "status": "passed",
+      "durationMs": 3.326666
+    },
+    {
+      "name": "both castling directions move each original king and rook as separate characters",
+      "status": "passed",
+      "durationMs": 22.3335
+    },
+    {
+      "name": "promotion changes the role while keeping the physical pawn identity, costume variant, and undo appearance",
+      "status": "passed",
+      "durationMs": 1.586708
+    },
+    {
+      "name": "8x4 custom layouts produce stable identities regardless of the stored position array order",
+      "status": "passed",
+      "durationMs": 5.630167
+    },
+    {
+      "name": "4x8 custom layouts produce stable identities regardless of the stored position array order",
+      "status": "passed",
+      "durationMs": 0.793625
+    },
+    {
+      "name": "8x8 custom layouts produce stable identities regardless of the stored position array order",
+      "status": "passed",
+      "durationMs": 0.679
+    },
+    {
+      "name": "Chaos Kingdom capture-promotions show both physical characters and tolerate incomplete capture-king drafts",
+      "status": "passed",
+      "durationMs": 1.241625
+    },
+    {
+      "name": "3-player identities agree across seat orientations and a move history with a resignation",
+      "status": "passed",
+      "durationMs": 97.098334
+    },
+    {
+      "name": "3-player public castling history reconstructs the correct rook without private engine metadata",
+      "status": "passed",
+      "durationMs": 187.110667
+    },
+    {
+      "name": "4-player identities agree across seat orientations and a move history with a resignation",
+      "status": "passed",
+      "durationMs": 108.001959
+    },
+    {
+      "name": "4-player public castling history reconstructs the correct rook without private engine metadata",
+      "status": "passed",
+      "durationMs": 363.029833
+    },
+    {
+      "name": "multiplayer capture events identify the opposing individual pawn, not just its piece type or army",
+      "status": "passed",
+      "durationMs": 272.367042
+    },
+    {
+      "name": "capturing a resigned army preserves the victim’s inactive appearance at that ply, including after undo",
+      "status": "passed",
+      "durationMs": 254.457708
+    },
+    {
+      "name": "a three-player pawn keeps its identity across a sector seam, a second capture, and promotion",
+      "status": "passed",
+      "durationMs": 138.910375
+    },
+    {
+      "name": "the cosmetic utility neither mutates its inputs nor guesses characters for unknown board squares",
+      "status": "passed",
+      "durationMs": 2.569375
+    },
+    {
+      "name": "first visits recommend Ask first for Classic and Free for the other game modes",
+      "status": "passed",
+      "durationMs": 1.542875
+    },
+    {
+      "name": "multiplayer starts with takebacks off and keeps a manual rule across player counts",
+      "status": "passed",
+      "durationMs": 0.260667
+    },
+    {
+      "name": "revisiting a mode restores its manual takeback choice",
+      "status": "passed",
+      "durationMs": 0.177625
+    },
+    {
+      "name": "custom positions share the Endgames preference without resetting edits",
+      "status": "passed",
+      "durationMs": 0.173833
+    },
+    {
+      "name": "mode recommendations preserve custom and unlimited allowances and other settings",
+      "status": "passed",
+      "durationMs": 0.343208
+    },
+    {
+      "name": "an existing mode preference is kept and input settings are never mutated",
+      "status": "passed",
+      "durationMs": 0.866625
+    }
+  ],
+  "limits": [
+    "Automated Node tests only; browser interaction, visual acceptance, build and packaging are separate checks."
+  ]
+}
